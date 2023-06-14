@@ -14,7 +14,7 @@ export class Game {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
+  @Column({type: 'text'})
   title: string;
 
   @ManyToMany(() => User, (user) => user.games)

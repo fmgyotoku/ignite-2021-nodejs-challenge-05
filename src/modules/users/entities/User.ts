@@ -15,13 +15,13 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
+  @Column({ type: 'text' })
   first_name: string;
 
-  @Column()
+  @Column({ type: 'text' })
   last_name: string;
 
-  @Column()
+  @Column({ type: 'text' })
   email: string;
 
   @ManyToMany(() => Game, (game) => game.users)
